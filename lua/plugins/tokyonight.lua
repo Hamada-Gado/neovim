@@ -4,8 +4,8 @@ return {
 	priority = 1000,
 	config = function()
 		--[[ require("tokyonight").setup({
-			transparent = true
-		})]]
+			transparent = true,
+		})]]--
 		vim.cmd([[colorscheme tokyonight]])
-	end
+	end,
 }
