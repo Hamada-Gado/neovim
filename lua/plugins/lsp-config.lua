@@ -15,7 +15,6 @@ return {
 	},
 	{
 		"jay-babu/mason-null-ls.nvim",
-		event = { "BufReadPre", "BufNewFile" },
 		dependencies = {
 			"williamboman/mason.nvim",
 			"nvimtools/none-ls.nvim",
@@ -29,14 +28,14 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-			--      local capabilities = require('cmp_nvim_lsp').default_capabilities()
+			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local lspconfig = require("lspconfig")
-			lspconfig.lua_ls.setup({})
-			--        capabilities = capabilities
-			--      })
-			lspconfig.lua_ls.setup({})
-			--			capabilities = capabilites
-			--	  })
+			lspconfig.lua_ls.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.pyright.setup({
+				capabilities = capabilities,
+			})
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
