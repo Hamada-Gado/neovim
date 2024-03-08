@@ -21,7 +21,7 @@ return {
 		},
 		config = function()
 			require("mason-null-ls").setup({
-				ensure_installed = { "stylua", "mypy", "ruff", "black", "isort" },
+				ensure_installed = { "stylua", "mypy", "black", "isort" },
 			})
 		end,
 	},
