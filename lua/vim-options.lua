@@ -30,8 +30,9 @@ vim.keymap.set("n", "<c-l>", ":wincmd l<CR>")
 -- remove search highlight
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 
--- close current buffer
+-- navigate buffers better
 vim.keymap.set("n", "<leader>x", ":close<CR>")
+vim.keymap.set("n", "<leader><BS>", ":bp<CR>")
 
 -- toggle relative line numbers
 vim.keymap.set("n", "<leader>r", ":set rnu!<CR>")
