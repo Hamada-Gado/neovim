@@ -20,6 +20,7 @@ This repository contains my NeoVim configuration files.
 
 3. Run neovim:
    * Set the `NVIM_APPNAME` environment variable to the name of the directory if it's not `nvim`:
+
       ```shell
       export NVIM_APPNAME="neovim"
       ```
