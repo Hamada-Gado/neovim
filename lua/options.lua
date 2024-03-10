@@ -2,6 +2,10 @@ local g = vim.g
 local opt = vim.opt
 
 g.mapleader = " "
+g.maplocalleader = " "
+
+-- set up colorscheme
+opt.termguicolors = true
 
 -- column and row limits
 opt.colorcolumn = "80"
@@ -25,4 +29,7 @@ opt.shiftwidth = 4
 opt.ignorecase = true
 
 -- show line numbers
-vim.wo.number = true
+opt.number = true
+
+-- show some invisible characters
+opt.list = true
