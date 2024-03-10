@@ -2,7 +2,9 @@
 
 This repository contains my NeoVim configuration files.
 
-## Installation
+* To find the keybindings, see the [mapping.lua](lua/plugins/mappings.lua) file, or run `:Telescope keymaps` in NeoVim.
+
+## Setup
 
 1. Install [NeoVim](https://neovim.io/):
 
