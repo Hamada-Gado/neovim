@@ -3,7 +3,6 @@ vim.g.mapleader = " "
 -- column and row limits
 vim.opt.colorcolumn = "80"
 vim.opt.scrolloff = 5
-vim.opt.autochdir = true
 
 -- solve copilot tapp map problem
 vim.g.copilot_assume_mapped = true
