@@ -30,6 +30,7 @@ opt.ignorecase = true
 
 -- show line numbers
 opt.number = true
+opt.relativenumber = true
 
 -- show some invisible characters
 opt.list = true
