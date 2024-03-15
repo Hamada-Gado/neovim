@@ -19,5 +19,22 @@ return {
             capabilities = capabilities,
             filetypes = { "python" },
         })
+
+        lspconfig.rust_analyzer.setup({
+            capabilities = capabilities,
+            filetypes = { "rust" },
+            root_dir = lspconfig.util.root_pattern("Cargo.toml"),
+            settings = {
+                ["rust-analyzer"] = {
+                    cargo = {
+                        allFeatures = true,
+                        loadOutDirsFromCheck = true,
+                    },
+                    procMacro = {
+                        enable = true,
+                    },
+                },
+            },
+        })
     end,
 }

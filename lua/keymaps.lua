@@ -1,3 +1,9 @@
+-- copy to clipboard
+vim.keymap.set({ "n", "v" }, "<c-c>", '"+y', { desc = "Copy to clipboard" })
+
+-- copy the current file path
+vim.keymap.set("n", "<leader>cp", ":let @+=expand('%:p')<CR>", { desc = "Copy file path" })
+
 -- navigate vim panes better
 vim.keymap.set("n", "<c-k>", ":wincmd k<CR>", { desc = "Move up between panes" })
 vim.keymap.set("n", "<c-j>", ":wincmd j<CR>", { desc = "Move down between panes" })

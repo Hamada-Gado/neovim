@@ -11,7 +11,7 @@ return {
         lazy = false,
         config = function()
             require("mason-lspconfig").setup({
-                ensure_installed = { "lua_ls", "pyright", "ruff_lsp" },
+                ensure_installed = { "lua_ls", "pyright", "ruff_lsp", "rust_analyzer" },
             })
         end,
     },
