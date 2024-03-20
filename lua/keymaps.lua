@@ -45,9 +45,9 @@ vim.keymap.set("n", "<Leader>dr", ":DapRestartFrame<CR>", { desc = "Debugging: R
 vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", { desc = "Preview git changes" })
 vim.keymap.set("n", "<leader>gt", ":Gitsigns toggle_current_line_blame<CR>", { desc = "Toggle git blame" })
 
--- LSP
+-- lSP
 vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Show hover information" })
-vim.keymap.set("n", "<leader>lf", vim.diagnostic.open_float, { desc = "Open float diagnostics" })
+vim.keymap.set("n", "<leader>fd", vim.diagnostic.open_float, { desc = "Open float diagnostics" })
 vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, { desc = "Go to definition" })
 vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, { desc = "Go to references" })
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
