@@ -1,6 +1,7 @@
 return {
     {
         "mfussenegger/nvim-dap",
+        lazy = true,
         dependencies = {
             "rcarriga/nvim-dap-ui",
         },
@@ -26,6 +27,7 @@ return {
     },
     {
         "mfussenegger/nvim-dap-python",
+        lazy = true,
         ft = "python",
         dependencies = {
             "mfussenegger/nvim-dap",

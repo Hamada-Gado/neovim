@@ -11,7 +11,7 @@ return {
         lazy = false,
         config = function()
             require("mason-lspconfig").setup({
-                ensure_installed = { "lua_ls", "pyright", "ruff_lsp", "rust_analyzer" },
+                ensure_installed = { "lua_ls", "pyright", "ruff_lsp", "clangd", "rust_analyzer" },
             })
         end,
     },
@@ -25,7 +25,7 @@ return {
         },
         config = function()
             require("mason-null-ls").setup({
-                ensure_installed = { "stylua", "mypy", "black", "isort" },
+                ensure_installed = { "stylua", "mypy", "black", "isort", "clang-format" },
             })
         end,
     },

@@ -22,14 +22,14 @@ vim.keymap.set("n", "<leader>r", ":set rnu!<CR>", { desc = "Toggle relative line
 
 -- comment toggle
 vim.keymap.set("n", "<leader>/", function()
-    require("Comment.api").toggle.linewise.current()
+	require("Comment.api").toggle.linewise.current()
 end, { desc = "Comment Toggle" })
 
 vim.keymap.set(
-    "v",
-    "<leader>/",
-    "<ESC>:lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>",
-    { desc = "Comment Toggle" }
+	"v",
+	"<leader>/",
+	"<ESC>:lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>",
+	{ desc = "Comment Toggle" }
 )
 
 -- debugging
@@ -59,7 +59,7 @@ vim.keymap.set("n", "<leader>bf", ":Neotree buffers reveal float<CR>", { desc = 
 
 -- telescope
 vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>", { desc = "Find files" })
-vim.keymap.set("n", "<leader>fg", ":Telescope live_grep<CR>", { desc = "Live grep" })
+vim.keymap.set("n", "<leader>fg", ":Telescope live_grep<CR>", { desc = "Live grep files" })
 vim.keymap.set("n", "<leader>fb", ":Telescope buffers<CR>", { desc = "Buffers" })
 vim.keymap.set("n", "<leader>km", ":Telescope keymaps<CR>", { desc = "Keymaps" })
-vim.keymap.set("n", "<C-p>", ":Telescope git_files<CR>", { desc = "Git files" })
+vim.keymap.set("n", "<leader>gf", ":Telescope git_files<CR>", { desc = "Git files" })
