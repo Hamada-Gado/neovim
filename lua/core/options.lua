@@ -4,6 +4,9 @@ local opt = vim.opt
 g.mapleader = " "
 g.maplocalleader = " "
 
+-- set syntax
+vim.cmd("syntax enable")
+
 -- set up colorscheme
 opt.termguicolors = true
 

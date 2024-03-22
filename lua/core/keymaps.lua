@@ -1,3 +1,6 @@
+-- quick save
+vim.keymap.set("n", "<leader>w", ":w<CR>", { desc = "Quick save" })
+
 -- copy to clipboard
 vim.keymap.set({ "n", "v" }, "<c-c>", '"+y', { desc = "Copy to clipboard" })
 
@@ -16,6 +19,7 @@ vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>", { desc = "Remove search high
 -- navigate buffers better
 vim.keymap.set("n", "<leader>x", ":close<CR>", { desc = "Close buffer" })
 vim.keymap.set("n", "<leader><BS>", ":bp<CR>", { desc = "Previous buffer" })
+vim.keymap.set("n", "<leader>nt", ":tabnew<CR>", { desc = "New tab" })
 
 -- toggle relative line numbers
 vim.keymap.set("n", "<leader>r", ":set rnu!<CR>", { desc = "Toggle relative line numbers" })
@@ -63,3 +67,4 @@ vim.keymap.set("n", "<leader>fg", ":Telescope live_grep<CR>", { desc = "Live gre
 vim.keymap.set("n", "<leader>fb", ":Telescope buffers<CR>", { desc = "Buffers" })
 vim.keymap.set("n", "<leader>km", ":Telescope keymaps<CR>", { desc = "Keymaps" })
 vim.keymap.set("n", "<leader>gf", ":Telescope git_files<CR>", { desc = "Git files" })
+
