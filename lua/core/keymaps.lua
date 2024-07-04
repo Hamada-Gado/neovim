@@ -21,7 +21,7 @@ vim.keymap.set("n", "<leader>nt", ":tabnew<CR>", { desc = "New tab" })
 vim.keymap.set("n", "<leader>x", ":close<CR>", { desc = "Close window" })
 
 vim.keymap.set("n", "<leader>en", ":enew<CR>", { desc = "New empty buffer" })
-vim.keymap.set("n", "<leader>d", ":bd<CR>", { desc = "Delete buffer" })
+vim.keymap.set("n", "<leader>bd", ":bd<CR>", { desc = "Delete buffer" })
 vim.keymap.set("n", "<leader>p", ":bp<CR>", { desc = "Previous buffer" })
 vim.keymap.set("n", "<leader>n", ":bn<CR>", { desc = "Next buffer" })
 
@@ -30,14 +30,14 @@ vim.keymap.set("n", "<leader>r", ":set rnu!<CR>", { desc = "Toggle relative line
 
 -- comment toggle
 vim.keymap.set("n", "<leader>/", function()
-  require("Comment.api").toggle.linewise.current()
+	require("Comment.api").toggle.linewise.current()
 end, { desc = "Comment Toggle" })
 
 vim.keymap.set(
-  "v",
-  "<leader>/",
-  "<ESC>:lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>",
-  { desc = "Comment Toggle" }
+	"v",
+	"<leader>/",
+	"<ESC>:lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>",
+	{ desc = "Comment Toggle" }
 )
 
 -- debugging
