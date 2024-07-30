@@ -22,8 +22,8 @@ vim.keymap.set("n", "<leader>x", ":close<CR>", { desc = "Close window" })
 
 vim.keymap.set("n", "<leader>en", ":enew<CR>", { desc = "New empty buffer" })
 vim.keymap.set("n", "<leader>bd", ":bd<CR>", { desc = "Delete buffer" })
-vim.keymap.set("n", "<leader>p", ":bp<CR>", { desc = "Previous buffer" })
-vim.keymap.set("n", "<leader>n", ":bn<CR>", { desc = "Next buffer" })
+vim.keymap.set("n", "<leader>pb", ":bp<CR>", { desc = "Previous buffer" })
+vim.keymap.set("n", "<leader>nb", ":bn<CR>", { desc = "Next buffer" })
 
 -- toggle relative line numbers
 vim.keymap.set("n", "<leader>r", ":set rnu!<CR>", { desc = "Toggle relative line numbers" })
