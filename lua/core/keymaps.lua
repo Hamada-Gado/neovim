@@ -22,8 +22,8 @@ vim.keymap.set("n", "<leader>x", ":close<CR>", { desc = "Close window" })
 
 vim.keymap.set("n", "<leader>en", ":enew<CR>", { desc = "New empty buffer" })
 vim.keymap.set("n", "<leader>bd", ":bd<CR>", { desc = "Delete buffer" })
-vim.keymap.set("n", "<leader>pb", ":bp<CR>", { desc = "Previous buffer" })
-vim.keymap.set("n", "<leader>nb", ":bn<CR>", { desc = "Next buffer" })
+vim.keymap.set("n", "<leader>bp", ":bp<CR>", { desc = "Previous buffer" })
+vim.keymap.set("n", "<leader>bn", ":bn<CR>", { desc = "Next buffer" })
 
 -- toggle relative line numbers
 vim.keymap.set("n", "<leader>r", ":set rnu!<CR>", { desc = "Toggle relative line numbers" })
@@ -62,8 +62,8 @@ vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action
 vim.keymap.set("n", "<leader>fm", vim.lsp.buf.format, { desc = "Format document" })
 
 -- neotree
-vim.keymap.set("n", "<C-n>", ":Neotree filesystem toggle float<CR>", { desc = "Toggle filesystem to the left" })
-vim.keymap.set("n", "<leader>bf", ":Neotree buffers reveal float<CR>", { desc = "Reveal buffers floating" })
+vim.keymap.set("n", "<C-n>", ":Neotree filesystem toggle float<CR>", { desc = "Toggle filesystem floating" })
+vim.keymap.set("n", "<C-b>", ":Neotree buffers toggle float<CR>", { desc = "Reveal buffers floating" })
 
 -- telescope
 vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>", { desc = "Find files" })
@@ -71,3 +71,6 @@ vim.keymap.set("n", "<leader>fg", ":Telescope live_grep<CR>", { desc = "Live gre
 vim.keymap.set("n", "<leader>fb", ":Telescope buffers<CR>", { desc = "Buffers" })
 vim.keymap.set("n", "<leader>km", ":Telescope keymaps<CR>", { desc = "Keymaps" })
 vim.keymap.set("n", "<leader>gf", ":Telescope git_files<CR>", { desc = "Git files" })
+vim.keymap.set("n", "<leader>fr", function()
+	require("telescope.builtin").lsp_references()
+end, { noremap = true, silent = true, desc = "LSP find all references" })
