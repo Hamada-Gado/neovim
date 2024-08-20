@@ -1,51 +1,66 @@
 return {
-    "neovim/nvim-lspconfig",
-    lazy = false,
-    config = function()
-        local capabilities = require("cmp_nvim_lsp").default_capabilities()
+  "neovim/nvim-lspconfig",
+  lazy = false,
+  config = function()
+    local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-        local lspconfig = require("lspconfig")
+    local lspconfig = require("lspconfig")
 
-        lspconfig.lua_ls.setup({
-            capabilities = capabilities,
-            filetypes = { "lua" },
-        })
+    lspconfig.lua_ls.setup({
+      capabilities = capabilities,
+      filetypes = { "lua" },
+    })
 
-        lspconfig.pyright.setup({
-            capabilities = capabilities,
-            filetypes = { "python" },
-        })
+    lspconfig.pyright.setup({
+      capabilities = capabilities,
+      filetypes = { "python" },
+    })
 
-        lspconfig.clangd.setup({
-            capabilities = capabilities,
-            filetypes = { "c", "cpp" },
-        })
+    lspconfig.tsserver.setup({
+      capabilities = capabilities,
+      filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+    })
 
-        lspconfig.ruff_lsp.setup({
-            capabilities = capabilities,
-            filetypes = { "python" },
-        })
+    lspconfig.tailwindcss.setup({
+      capabilities = capabilities,
+      filetypes = { "html", "css", "scss", "javascript", "typescript", "javascriptreact", "typescriptreact" },
+    })
 
-        lspconfig.rust_analyzer.setup({
-            capabilities = capabilities,
-            filetypes = { "rust" },
-            root_dir = lspconfig.util.root_pattern("Cargo.toml"),
-            settings = {
-                ["rust-analyzer"] = {
-                    cargo = {
-                        allFeatures = true,
-                        loadOutDirsFromCheck = true,
-                    },
-                    procMacro = {
-                        enable = true,
-                    },
-                },
-            },
-        })
+    lspconfig.eslint.setup({
+      capabilities = capabilities,
+      filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+    })
 
-        lspconfig.gleam.setup({
-            capabilities = capabilities,
-            filetypes = { "gleam" },
-        })
-    end,
+    lspconfig.clangd.setup({
+      capabilities = capabilities,
+      filetypes = { "c", "cpp" },
+    })
+
+    lspconfig.ruff_lsp.setup({
+      capabilities = capabilities,
+      filetypes = { "python" },
+    })
+
+    lspconfig.rust_analyzer.setup({
+      capabilities = capabilities,
+      filetypes = { "rust" },
+      root_dir = lspconfig.util.root_pattern("Cargo.toml"),
+      settings = {
+        ["rust-analyzer"] = {
+          cargo = {
+            allFeatures = true,
+            loadOutDirsFromCheck = true,
+          },
+          procMacro = {
+            enable = true,
+          },
+        },
+      },
+    })
+
+    lspconfig.gleam.setup({
+      capabilities = capabilities,
+      filetypes = { "gleam" },
+    })
+  end,
 }
