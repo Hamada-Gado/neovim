@@ -21,7 +21,7 @@ return {
 					"ruff_lsp",
 					"clangd",
 					"rust_analyzer",
-					"eslint",
+					"eslint@4.8.0",
 					"tailwindcss",
 					"tsserver",
 				},

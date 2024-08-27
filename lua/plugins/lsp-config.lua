@@ -5,6 +5,7 @@ return {
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
     local lspconfig = require("lspconfig")
+
     -- show source of the diagnostic
     vim.diagnostic.config({
       virtual_text = {
@@ -15,6 +16,7 @@ return {
       },
     })
 
+    -- LSPs
     lspconfig.lua_ls.setup({
       capabilities = capabilities,
       filetypes = { "lua" },
@@ -38,23 +40,10 @@ return {
     lspconfig.eslint.setup({
       capabilities = capabilities,
       filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
-
-      bin = "eslint",
-      code_actions = {
-        enable = true,
-        apply_on_save = {
-          enable = true,
-          types = { "directive", "problem", "suggestion", "layout" },
-        },
-        disable_rule_comment = {
-          enable = true,
-          location = "separate_line", -- or `same_line`
-        },
-      },
-      diagnostics = {
-        enable = true,
-        report_unused_disable_directives = false,
-        run_on = "type", -- or `save`
+      settings = {
+        workingDirectory = { mode = "auto" },
+        format = { enable = true },
+        lint = { enable = true },
       },
     })
 
