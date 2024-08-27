@@ -60,6 +60,7 @@ vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, { desc = "Go to defini
 vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, { desc = "Go to references" })
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
 vim.keymap.set("n", "<leader>fm", vim.lsp.buf.format, { desc = "Format document" })
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename" })
 
 -- neotree
 vim.keymap.set("n", "<C-n>", ":Neotree filesystem toggle float<CR>", { desc = "Toggle filesystem floating" })
