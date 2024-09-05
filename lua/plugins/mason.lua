@@ -42,7 +42,6 @@ return {
 					"stylua",
 					"mypy",
 					"black",
-					"isort",
 					"clang-format",
 					"prettierd",
 				},
