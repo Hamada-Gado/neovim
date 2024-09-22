@@ -2,7 +2,7 @@
 
 This repository contains my NeoVim configuration files.
 
-* To find the keybindings, see the [mapping.lua](lua/plugins/mappings.lua) file, or run `:Telescope keymaps` in NeoVim.
+- To find the keybindings, see the [mapping.lua](lua/plugins/mappings.lua) file, or run `:Telescope keymaps` in NeoVim.
 
 ## Setup
 
@@ -19,13 +19,16 @@ This repository contains my NeoVim configuration files.
    ```
 
 3. Run neovim:
-   * Set the `NVIM_APPNAME` environment variable to the name of the directory if it's not `nvim`:
 
-      ```shell
-      export NVIM_APPNAME="neovim"
-      ```
+   - Set the `NVIM_APPNAME` environment variable to the name of the directory if it's not `nvim`:
 
-4. Checkhealth in NeoVim:
+     ```shell
+     export NVIM_APPNAME="neovim"
+     ```
+
+4. Check `lua/core/options.lua` for the default settings.
+
+5. Checkhealth in NeoVim:
 
    ```shell
    :checkhealth
