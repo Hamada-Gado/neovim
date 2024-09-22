@@ -24,3 +24,9 @@ This repository contains my NeoVim configuration files.
       ```shell
       export NVIM_APPNAME="neovim"
       ```
+
+4. Checkhealth in NeoVim:
+
+   ```shell
+   :checkhealth
+   ```
