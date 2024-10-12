@@ -13,22 +13,40 @@ vim.keymap.set("n", "<c-j>", ":wincmd j<CR>", { desc = "Move down between panes"
 vim.keymap.set("n", "<c-h>", ":wincmd h<CR>", { desc = "Move left between panes" })
 vim.keymap.set("n", "<c-l>", ":wincmd l<CR>", { desc = "Move right between panes" })
 
+-- resize panes
+vim.keymap.set("n", "<c-up>", ":resize +2<CR>", { desc = "Resize pane up" })
+vim.keymap.set("n", "<c-down>", ":resize -2<CR>", { desc = "Resize pane down" })
+vim.keymap.set("n", "<c-left>", ":vertical resize +2<CR>", { desc = "Resize pane left" })
+vim.keymap.set("n", "<c-right>", ":vertical resize -2<CR>", { desc = "Resize pane right" })
+
+-- move lines up and down
+vim.keymap.set("n", "<A-j>", ":m .+1<CR>", { desc = "Move line down" })
+vim.keymap.set("n", "<A-k>", ":m .-2<CR>", { desc = "Move line up" })
+vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move line down" })
+vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move line up" })
+
 -- remove search highlight
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>", { desc = "Remove search highlight" })
 
--- navigate buffers better
+-- windows
 vim.keymap.set("n", "<leader>nt", ":tabnew<CR>", { desc = "New tab" })
+vim.keymap.set("n", "<leader>vs", ":vsplit<CR>", { desc = "Vertical split" })
+vim.keymap.set("n", "<leader>sp", ":split<CR>", { desc = "Horizontal split" })
 vim.keymap.set("n", "<leader>x", ":close<CR>", { desc = "Close window" })
 
+-- navigate buffers better
 vim.keymap.set("n", "<leader>en", ":enew<CR>", { desc = "New empty buffer" })
 vim.keymap.set("n", "<leader>bd", ":bd<CR>", { desc = "Delete buffer" })
 vim.keymap.set("n", "<leader>bp", ":bp<CR>", { desc = "Previous buffer" })
 vim.keymap.set("n", "<leader>bn", ":bn<CR>", { desc = "Next buffer" })
 
 -- toggle relative line numbers
-vim.keymap.set("n", "<leader>r", ":set rnu!<CR>", { desc = "Toggle relative line numbers" })
+vim.keymap.set("n", "<leader>rn", ":set rnu!<CR>", { desc = "Toggle relative line numbers" })
 
--- comment toggle
+-- toggle line wrap
+vim.keymap.set("n", "<leader>rp", ":set wrap!<CR>", { desc = "Toggle line wrap" })
+
+-- toggle comment
 vim.keymap.set("n", "<leader>/", function()
 	require("Comment.api").toggle.linewise.current()
 end, { desc = "Comment Toggle" })
