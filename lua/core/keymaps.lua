@@ -82,7 +82,6 @@ vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename" })
 
 -- neotree
 vim.keymap.set("n", "<C-n>", ":Neotree filesystem toggle float<CR>", { desc = "Toggle filesystem floating" })
-vim.keymap.set("n", "<C-b>", ":Neotree buffers toggle float<CR>", { desc = "Reveal buffers floating" })
 
 -- telescope
 vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>", { desc = "Find files" })
