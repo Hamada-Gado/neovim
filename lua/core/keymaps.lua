@@ -41,7 +41,7 @@ vim.keymap.set("n", "<leader>bp", ":bp<CR>", { desc = "Previous buffer" })
 vim.keymap.set("n", "<leader>bn", ":bn<CR>", { desc = "Next buffer" })
 
 -- toggle relative line numbers
-vim.keymap.set("n", "<leader>rn", ":set rnu!<CR>", { desc = "Toggle relative line numbers" })
+vim.keymap.set("n", "<leader>r", ":set rnu!<CR>", { desc = "Toggle relative line numbers" })
 
 -- toggle line wrap
 vim.keymap.set("n", "<leader>rp", ":set wrap!<CR>", { desc = "Toggle line wrap" })
