@@ -1,9 +1,8 @@
 -- quick save
 vim.keymap.set("n", "<leader>w", ":w<CR>", { desc = "Quick save" })
 
--- copy/paste
+-- copy
 vim.keymap.set({ "n", "v" }, "<c-c>", '"+y', { desc = "Copy to clipboard" })
-vim.keymap.set({"n", "v"}, "<c-p>", '"0p', { desc = "Paste from reg zero" })
 
 -- copy the current file path
 vim.keymap.set("n", "<leader>cp", ":let @+=expand('%:p')<CR>", { desc = "Copy file path" })

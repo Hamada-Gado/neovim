@@ -30,6 +30,12 @@ return {
     lspconfig.tsserver.setup({
       capabilities = capabilities,
       filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+      -- typescript.preferences.preferTypeOnlyAutoImports
+      init_options = {
+        preferences = {
+          preferTypeOnlyAutoImports = true,
+        },
+      },
     })
 
     lspconfig.tailwindcss.setup({
