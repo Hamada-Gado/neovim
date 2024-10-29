@@ -2,15 +2,11 @@
 
 This repository contains my NeoVim configuration files.
 
-- To find the keybindings, see the [keymaps.lua](lua/core/keymaps.lua) file, or run `:Telescope keymaps` in NeoVim.
+- See the [keymaps.lua](lua/core/keymaps.lua) file, or run `:Telescope keymaps` in NeoVim to find the keybindings.
 
 ## Setup
 
-1. Install [NeoVim](https://neovim.io/):
-
-   ```shell
-   sudo apt install neovim
-   ```
+1. Install [NeoVim](https://neovim.io/).
 
 2. Clone this repository at `~/.config/`:
 
