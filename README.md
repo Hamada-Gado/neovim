@@ -2,7 +2,7 @@
 
 This repository contains my NeoVim configuration files.
 
-- To find the keybindings, see the [mapping.lua](lua/plugins/mappings.lua) file, or run `:Telescope keymaps` in NeoVim.
+- To find the keybindings, see the [keymaps.lua](lua/core/keymaps.lua) file, or run `:Telescope keymaps` in NeoVim.
 
 ## Setup
 
