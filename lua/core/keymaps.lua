@@ -15,16 +15,16 @@ vim.keymap.set("n", "<c-h>", ":wincmd h<CR>", { desc = "Move left between panes"
 vim.keymap.set("n", "<c-l>", ":wincmd l<CR>", { desc = "Move right between panes" })
 
 -- resize panes
-vim.keymap.set("n", "<c-up>", ":resize +2<CR>", { desc = "Resize pane up" })
-vim.keymap.set("n", "<c-down>", ":resize -2<CR>", { desc = "Resize pane down" })
-vim.keymap.set("n", "<c-left>", ":vertical resize +2<CR>", { desc = "Resize pane left" })
-vim.keymap.set("n", "<c-right>", ":vertical resize -2<CR>", { desc = "Resize pane right" })
+vim.keymap.set("n", "<a-k>", ":resize +2<CR>", { desc = "Resize pane up" })
+vim.keymap.set("n", "<a-j>", ":resize -2<CR>", { desc = "Resize pane down" })
+vim.keymap.set("n", "<a-l>", ":vertical resize +2<CR>", { desc = "Resize pane left" })
+vim.keymap.set("n", "<a-h>", ":vertical resize -2<CR>", { desc = "Resize pane right" })
 
 -- move lines up and down
-vim.keymap.set("n", "<A-j>", ":m .+1<CR>", { desc = "Move line down" })
-vim.keymap.set("n", "<A-k>", ":m .-2<CR>", { desc = "Move line up" })
-vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move line down" })
-vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move line up" })
+vim.keymap.set("n", "<c-a-j>", ":m .+1<CR>", { desc = "Move line down" })
+vim.keymap.set("n", "<c-a-k>", ":m .-2<CR>", { desc = "Move line up" })
+vim.keymap.set("v", "<c-a-j>", ":m '>+1<CR>gv=gv", { desc = "Move line down" })
+vim.keymap.set("v", "<c-a-k>", ":m '<-2<CR>gv=gv", { desc = "Move line up" })
 
 -- remove search highlight
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>", { desc = "Remove search highlight" })
