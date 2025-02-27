@@ -34,21 +34,6 @@ vim.keymap.set("n", "<leader>nt", ":tabnew<CR>", { desc = "New tab" })
 vim.keymap.set("n", "<leader>vs", ":vsplit<CR>", { desc = "Vertical split" })
 vim.keymap.set("n", "<leader>sp", ":split<CR>", { desc = "Horizontal split" })
 vim.keymap.set("n", "<leader>x", ":close<CR>", { desc = "Close window" })
-vim.keymap.set("n", "<leader>q", function()
-  -- Save the current buffer number
-  local bufnr = vim.api.nvim_get_current_buf()
-
-  -- Create a new scratch buffer
-  vim.cmd("enew")                   -- Create a new empty buffer
-  local new_buf = vim.api.nvim_get_current_buf()
-  vim.bo[new_buf].buftype = "nofile" -- Mark as scratch (no file on disk)
-  vim.bo[new_buf].bufhidden = "wipe" -- Automatically delete buffer when abandoned
-  vim.bo[new_buf].swapfile = false  -- No swap file for this buffer
-  vim.bo[new_buf].modifiable = true -- Allow modifications
-
-  -- Delete the original buffer
-  vim.cmd("bd " .. bufnr)
-end, { noremap = true, silent = true, desc = "Close buffer but keep window open" })
 
 -- navigate buffers better
 vim.keymap.set("n", "<leader>en", ":enew<CR>", { desc = "New empty buffer" })
