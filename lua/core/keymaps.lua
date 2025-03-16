@@ -1,12 +1,22 @@
 -- quick save
 vim.keymap.set("n", "<leader>w", ":w<CR>", { desc = "Quick save" })
 
--- copy/paset
+-- copy/paste
 vim.keymap.set({ "n", "v" }, "<c-c>", '"+y', { desc = "Copy to clipboard" })
 vim.keymap.set({ "n", "v" }, "<c-p>", '"0p', { desc = "Paste from reg zero" })
 
 -- copy the current file path
 vim.keymap.set("n", "<leader>cp", ":let @+=expand('%:p')<CR>", { desc = "Copy file path" })
+
+-- spell check
+vim.keymap.set("n", "<leader>ss", ":setlocal spell! spelllang=en_us<CR>", { desc = "Toggle spell check" })
+vim.keymap.set("n", "<leader>sn", "]s", { desc = "Next spell error" })
+vim.keymap.set("n", "<leader>sp", "[s", { desc = "Previous spell error" })
+vim.keymap.set("n", "<leader>sa", "zg", { desc = "Add word to spell check" })
+vim.keymap.set("n", "<leader>su", "zug", { desc = "Undo add word to spell check" })
+vim.keymap.set("n", "<leader>sc", "z=", { desc = "Correct spelling" })
+vim.keymap.set("n", "<leader>sia", "zG", { desc = "Add word to spell check for current buffers only" })
+vim.keymap.set("n", "<leader>siu", "zuG", { desc = "Undo add word to spell check for current buffers only" })
 
 -- navigate vim panes better
 vim.keymap.set("n", "<c-k>", ":wincmd k<CR>", { desc = "Move up between panes" })
@@ -32,7 +42,7 @@ vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>", { desc = "Remove search high
 -- windows
 vim.keymap.set("n", "<leader>nt", ":tabnew<CR>", { desc = "New tab" })
 vim.keymap.set("n", "<leader>vs", ":vsplit<CR>", { desc = "Vertical split" })
-vim.keymap.set("n", "<leader>sp", ":split<CR>", { desc = "Horizontal split" })
+vim.keymap.set("n", "<leader>hs", ":split<CR>", { desc = "Horizontal split" })
 vim.keymap.set("n", "<leader>x", ":close<CR>", { desc = "Close window" })
 
 -- navigate buffers better
@@ -49,14 +59,14 @@ vim.keymap.set("n", "<leader>rp", ":set wrap!<CR>", { desc = "Toggle line wrap" 
 
 -- toggle comment
 vim.keymap.set("n", "<leader>/", function()
-  require("Comment.api").toggle.linewise.current()
+	require("Comment.api").toggle.linewise.current()
 end, { desc = "Comment Toggle" })
 
 vim.keymap.set(
-  "v",
-  "<leader>/",
-  "<ESC>:lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>",
-  { desc = "Comment Toggle" }
+	"v",
+	"<leader>/",
+	"<ESC>:lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>",
+	{ desc = "Comment Toggle" }
 )
 
 -- debugging
@@ -91,5 +101,5 @@ vim.keymap.set("n", "<leader>fb", ":Telescope buffers<CR>", { desc = "Buffers" }
 vim.keymap.set("n", "<leader>km", ":Telescope keymaps<CR>", { desc = "Keymaps" })
 vim.keymap.set("n", "<leader>gf", ":Telescope git_files<CR>", { desc = "Git files" })
 vim.keymap.set("n", "<leader>fr", function()
-  require("telescope.builtin").lsp_references()
+	require("telescope.builtin").lsp_references()
 end, { noremap = true, silent = true, desc = "LSP find all references" })

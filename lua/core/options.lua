@@ -37,3 +37,6 @@ opt.relativenumber = true
 
 -- show some invisible characters
 opt.list = true
+
+-- set spell check
+opt.spell = true
